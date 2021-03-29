@@ -13,14 +13,6 @@ const mapDispatchToProps = () => ({
   addCard: (card: PaymentCard) => store.dispatch(addCard(card)),
 });
 
-type Card = {
-  cardNumber: string,
-  cvv: string,
-  expDate: string,
-  name: string,
-  type: string | undefined
-}
-
 const connector = connect(mapStateToProps, mapDispatchToProps);
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
@@ -71,7 +63,7 @@ const AddCard: React.FC<Props> = ({ addCard }) => {
       setErrorMessage("Invalid cardholder's name");
       return;
     }
-    
+
     if (card.cardNumber && card.cvv && card.expDate && card.type && card.name) {
       addCard(card);
       setCardNumber('')
@@ -90,7 +82,6 @@ const AddCard: React.FC<Props> = ({ addCard }) => {
             type="text"
             className="input-filed"
             placeholder="Card Number"
-            autoComplete="false"
             value={cardNumber}
             onChange={e=>setCardNumber(e.target.value)}
           />
@@ -98,7 +89,6 @@ const AddCard: React.FC<Props> = ({ addCard }) => {
             type="text"
             className="input-filed"
             placeholder="MM/YY"
-            autoComplete="false"
             value={expiryDate}
             onChange={e=>setExpiryDate(e.target.value)}
           />
@@ -106,7 +96,6 @@ const AddCard: React.FC<Props> = ({ addCard }) => {
             type="password"
             className="input-filed"
             placeholder="CCV"
-            autoComplete="false"
             value={cvv}
             onChange={e=>setCVV(e.target.value)}
           />
@@ -114,7 +103,6 @@ const AddCard: React.FC<Props> = ({ addCard }) => {
             type="text"
             className="input-filed"
             placeholder="Cardholder's name"
-            autoComplete="false"
             value={cardhorderName}
             onChange={e=>setCardholderName(e.target.value)}
           />

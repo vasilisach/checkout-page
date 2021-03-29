@@ -1,0 +1,89 @@
+.app__container {
+  width: 70%;
+  height: 70%;
+  box-shadow: 0 0 30px lightgrey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.stepper-navigation {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.stepper-navigation button {
+  background-color: lightseagreen;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  min-width: 120px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 10px;
+}
+.cart-item__image {
+  width: 60px;
+  height: 60px;
+}
+.cart-item__left svg{
+  width: 10px;
+  height: 10px;
+  margin: 0 30px;
+}
+.cart-item__left{
+  display: flex;
+  align-items: center;
+}
+.total {
+  float: right;
+  padding: 20px 0;
+}
+.payment-card {
+  height: 150px;
+  background-color: #a0cde7;
+  border-radius: 10px;
+  outline: none;
+}
+.cards-slider {
+  width: 300px;
+  margin: auto;
+}
+.payment-card__logo svg {
+  width: 50px;
+  height: 50px;
+}
+.payment-card__number{
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.payment-card__info{
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: white;
+}
+form.payment-card-form fieldset{
+  width: 300px;
+  margin: auto;
+}
+.input-filed {
+  margin: 5px auto;
+  display: block;
+}

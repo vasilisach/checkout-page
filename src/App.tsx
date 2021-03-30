@@ -21,7 +21,7 @@ const connector = connect(mapStateToProps, mapDispatchToProps);
 type PropsFromRedux = ConnectedProps<typeof connector>;
 type Props = PropsFromRedux;
 
-const App:React.FC<Props> = ({addToCart}) => {
+const App: React.FC<Props> = ({ addToCart }) => {
 
   useEffect(() => {
     axios.get('https://fakestoreapi.com/carts/1/').then(response => {

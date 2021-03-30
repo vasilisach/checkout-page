@@ -7,17 +7,18 @@ const initialState = {
       cardNumber: '4242424242424242',
       cvv: '122',
       expDate: '10/23',
-      name: 'Victor Ivanov',
+      cardholdersName: 'Victor Ivanov',
       type: 'visa'
     },
     {
       cardNumber: '5555555555554444',
       cvv: '123',
       expDate: '07/22',
-      name: 'Victor Ivanov',
+      cardholdersName: 'Victor Ivanov',
       type: 'mastercard'
     }
-  ]
+  ],
+  selectedCard: 0
 }
 
 const cardsReducer = (state = initialState, action:PaymentCardActions) => {
@@ -26,7 +27,12 @@ const cardsReducer = (state = initialState, action:PaymentCardActions) => {
     return {
       ...state,
       cards: [ action.payload, ...state.cards]
-    };
+      };
+    case cardTypes.CHANGE_SELECTED_CARD:
+      return {
+        ...state,
+        selectedCard: action.payload
+      }
   
     default:
       return state;

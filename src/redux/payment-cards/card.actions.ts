@@ -7,3 +7,10 @@ export const addCard = (card: PaymentCard) => {
     payload: card
   }
 }
+
+export const changeSelectedCard = (index: number) => {
+  return {
+    type: cardTypes.CHANGE_SELECTED_CARD,
+    payload: index
+  }
+}

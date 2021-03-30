@@ -17,9 +17,9 @@ const OrderConfirmStep: React.FC<Props> = ({ cart }) => {
     <>
       <h2>Order confirmation</h2>
       <div>
-        {cart.data && cart.data?.products?.length ? cart.data.products.map(product => (
+        {cart.data && cart.data?.products?.length && cart.data.products.map(product => (
           <CartItem {...product} key={ product.productId}/>
-        )) : ''}
+        ))}
       </div>
       <div className="total">
         <b>Total: { cart.total }</b>

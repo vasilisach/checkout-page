@@ -2,7 +2,7 @@ export interface PaymentCard {
   cardNumber: string,
   cvv: string,
   expDate: string,
-  name: string,
+  cardholdersName: string,
   type: string
 }
 

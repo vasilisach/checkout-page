@@ -3,5 +3,5 @@ import { PaymentCard } from './paymentCardsTypes';
 
 export default interface RootState {
   cart: CartState,
-  cards: { cards: PaymentCard[] | [] }
+  cards: { cards: PaymentCard[] | [], selectedCard: number }
 }

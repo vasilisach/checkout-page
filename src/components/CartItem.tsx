@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import MultiplyIcon from './icons/MultiplyIcon';
-import RootState from '../types/commonTypes';
 import { connect, ConnectedProps } from 'react-redux';
 import { addToTotalPrice } from '../redux/cart/cart.actions';
 import store from '../redux/store';
